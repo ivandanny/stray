@@ -8,6 +8,8 @@ public class CardScript : MonoBehaviour
     public int attack;
     public int hp;
     public bool owner;
+
+    public int xPos, yPos;
     // Use this for initialization
     void Start()
     {
