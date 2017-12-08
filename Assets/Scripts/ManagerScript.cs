@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ManagerScript : MonoBehaviour {
-    public CardScript cardscript;
-
+    public CardScript cardScript;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,8 +12,8 @@ public class ManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 
 
 }

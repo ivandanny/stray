@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ZoneScript : MonoBehaviour {
-
-	// Use this for initialization
+    public ManagerScript managerScript;
+    public bool owner;
+ 	// Use this for initialization
 	void Start () {
 		
 	}
@@ -13,4 +14,12 @@ public class ZoneScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
+    private void OnMouseDown() {
+        if (managerScript.cardScript != null && (managerScript.cardScript.owner == this.owner))
+        {
+            managerScript.cardScript.gameObject.transform.position = this.transform.position;
+        }
+    }
 }

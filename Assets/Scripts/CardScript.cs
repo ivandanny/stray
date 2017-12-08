@@ -1,26 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class CardScript : MonoBehaviour {
-    public ManagerScript managerscript;
+public class CardScript : MonoBehaviour
+{
+    public ManagerScript managerScript;
     public int attack;
     public int hp;
-	// Use this for initialization
-	void Start () {
-        Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-
-    void TaskOnClick()
+    public bool owner;
+    // Use this for initialization
+    void Start()
     {
-        Debug.Log("You Have Clicked Me!");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void OnMouseDown()
+    {
+        managerScript.cardScript = this;
     }
 }
